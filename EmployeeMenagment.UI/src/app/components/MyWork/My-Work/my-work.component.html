@@ -1,0 +1,20 @@
+<body>
+    <app-navbar></app-navbar>
+  
+    <!-- Action Buttons below the Navbar -->
+    <div class="action-buttons">
+      <button class="action-btn add-btn"  (click)="NavigateToAddWorkComponent()">Add</button>
+      <!-- <button class="action-btn add-btn"  [routerLink]="['/My-Work/Add_Work']" routerLinkActive="router-link-active" >Add</button> -->
+      
+    </div>
+  
+    <!-- Centered Cards Section (below buttons) -->
+    <div class="center-info-container">
+      <div *ngFor="let card of cards" class="card" (click)="NavigateToEditWorkComponent(card.workID)">
+        <h3>{{ card.title }}</h3>
+        <p>Work ID: {{ card.workID }}</p>
+      </div>
+    </div>
+  </body>
+  
+

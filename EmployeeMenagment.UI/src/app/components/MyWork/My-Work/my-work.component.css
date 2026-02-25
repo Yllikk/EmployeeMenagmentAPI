@@ -1,0 +1,113 @@
+/* Body Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #434343, #000000);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 70px; /* To prevent the navbar from overlapping the content */
+    overflow: auto;
+  }
+  
+  /* Fixed Navbar Styling (if you have a navbar) */
+  app-navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
+  
+  /* Action Buttons Styling */
+  .action-buttons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;  /* Space between buttons */
+    margin-top: 80px;  /* Added space below the navbar */
+    padding: 10px 30px;  /* Add some padding to the container */
+   
+    border-radius: 10px;  /* Rounded corners for a smooth look */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4); /* Subtle shadow */
+    z-index: 20;
+  }
+  
+  /* Button Styling */
+  .action-btn {
+    margin-left: 1580px;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background-color: #434343; /* Page theme dark color */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  /* Add Button Color */
+  .add-btn {
+    background-color: #282828;  /* Green color for Add */
+  }
+  
+  /* Remove Button Color */
+  .remove-btn {
+    background-color: #F44336;  /* Red color for Remove */
+  }
+  
+  /* Hover Effects */
+  .action-btn:hover {
+    background-color: #6a6a6a; /* Gold color on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+  }
+  
+  /* Cards Section Styling */
+  .center-info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 1;
+    padding: 20px;
+    gap: 20px;  /* Space between each card */
+    margin-top: 30px;  /* Space above the first card */
+    color: white;
+  }
+  
+  /* Individual Card Styling */
+  .card {
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    border-radius: 10px;
+    text-align: start;
+    width: 80%;  /* Make cards a bit wider */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    transition: transform 0.2s ease;
+  }
+  
+  /* Card hover effect */
+  .card:hover {
+    transform: scale(1.05); /* Slight zoom effect when hovered */
+  }
+  
+  .card h3 {
+    margin: 0;
+    font-size: 24px;
+    color: #FFD700;
+  }
+  
+  .card p {
+    margin: 10px 0;
+    font-size: 18px;
+    margin-left: 15px;
+  }
+
+  /* .mat-dialog-centered {
+    position: absolute;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+  } */
+  

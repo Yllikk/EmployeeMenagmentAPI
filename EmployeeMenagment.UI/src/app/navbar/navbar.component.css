@@ -1,0 +1,94 @@
+/* nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #222222;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+a {
+    cursor: pointer;
+}
+
+
+nav .nav-left {
+    display: flex;
+    gap: 30px;  
+}
+
+nav .nav-left a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+
+nav .nav-left a.active {
+    color: #FFD700; 
+}
+
+
+nav .nav-left a:hover {
+    color: #FFD700; 
+}
+
+nav .nav-right h1 {
+    color: #FFD700; 
+    font-size: 24px;
+} */
+
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #222222;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+a {
+    cursor: pointer;
+}
+
+nav .nav-left {
+    display: flex;
+    gap: 30px;  /* Increased the space between the links */
+}
+
+nav .nav-left a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+/* Highlight the active link with golden color */
+nav .nav-left a.active {
+    color: #FFD700; /* Golden color to indicate active page */
+}
+
+/* Change link color on hover */
+nav .nav-left a:hover {
+    color: #FFD700; /* Highlight on hover */
+}
+
+nav .nav-right h1 {
+    color: #FFD700; /* Golden color */
+    font-size: 24px;
+}

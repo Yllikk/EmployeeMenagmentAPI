@@ -1,0 +1,34 @@
+<body>
+  <app-navbar></app-navbar>
+  
+    <div class="table-container" *ngIf="KaRequests">
+      <table class="user-table">
+        <thead>
+          <tr>
+            <th>IdCard</th>
+            <th>Emri</th>
+            <th>Mbiemri</th>
+            <th>Email</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of RequestUsers">
+                <td>{{ user.idCard }}</td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.surname }}</td>
+                <td>{{ user.email }}</td>
+                <td class="actions">
+                  <button (click)="approveUser(user)" class="approve-btn">Approve</button>
+                  <button (click)="disaproveEmployee(user)" class="disapprove-btn">Disapprove</button>
+                </td>
+              </tr>
+        </tbody>
+      </table>
+    </div>
+    <div *ngIf="!KaRequests" class="noUsers-div" >
+      <h2>Ska requests per momentin</h2>
+    </div>
+  </body>
+  
+  

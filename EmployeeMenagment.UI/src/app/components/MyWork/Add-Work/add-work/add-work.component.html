@@ -1,0 +1,39 @@
+<body>
+    <div class="card">
+      <form>
+        <div class="form-group">
+          <label for="name">Emri i Punimit</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            [(ngModel)]="UserWork.workName"
+          />
+        </div>
+        <div class="form-group">
+          <label for="surname">User ID</label>
+          <input
+            type="text"
+            id="surname"
+            name="surname"
+            [(ngModel)]="UserWork.userID"
+            readonly
+          />
+        </div>
+        <div class="form-group full-width">
+          <label for="idCard">Description</label>
+          <textarea
+            id="idCard"
+            name="idCard"
+            rows="4"
+            [(ngModel)]="UserWork.workDescription"
+            
+          ></textarea>
+        </div>
+        <div class="form-actions">
+          <button type="button" (click)="AddWork(UserWork)">Create</button>
+          <button id="button-cancel" class="button-cancel" (click)="CancelWork()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </body>

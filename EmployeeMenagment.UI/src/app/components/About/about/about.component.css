@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #434343, #000000);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 70px; /* To prevent the navbar from overlapping the content */
+}
+
+/* Navbar Styling */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #222222;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+nav .nav-left {
+    display: flex;
+    gap: 30px;  /* Increased the space between the links */
+}
+
+nav .nav-left a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+/* Highlight "Home" in yellow */
+nav .nav-left a.active {
+    color: #FFD700; /* Golden color to indicate active page */
+}
+
+/* Change link color on hover */
+nav .nav-left a:hover {
+    color: #FFD700; /* Highlight on hover */
+}
+
+nav .nav-right h1 {
+    color: #FFD700; /* Golden color */
+    font-size: 24px;
+}
+
+/* Center Information Styling */
+.center-info-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.info-text {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 30px;
+    font-weight: lighter;
+    color: rgba(255, 255, 255, 0.7); /* Faint text color */
+    line-height: 1.5;
+}
+
+.info-text p {
+    margin: 15px 0;
+}

@@ -1,0 +1,231 @@
+/* General Body Style */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #434343, #000000);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Navbar Styling */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #222222;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+nav .nav-left {
+    display: flex;
+    gap: 30px;  /* Increased the space between the links */
+}
+
+nav .nav-left a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+/* Highlight "Home" in yellow */
+nav .nav-left a.active {
+    color: #FFD700; /* Golden color to indicate active page */
+}
+
+/* Change link color on hover */
+nav .nav-left a:hover {
+    color: #FFD700; /* Highlight on hover */
+}
+
+nav .nav-right h1 {
+    color: #FFD700; /* Golden color */
+    font-size: 24px;
+}
+
+/* Main Container for Left and Right Cards */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    margin-top: 80px; /* Adjust for navbar height */
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Cards on the Left */
+.left-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+/* Styling for the Individual Cards */
+.card {
+    background-color: #222222;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+/* First Static Card (Welcome, Status, Phone Number) */
+.welcome-card {
+    background-color: #444444;
+    height: auto;  /* Keep original size */
+}
+
+.card-content {
+    display: flex;
+    justify-content: space-between; /* Space out content horizontally */
+    align-items: flex-start;
+    width: 1300px;
+}
+
+.left, .middle, .right {
+    flex: 1; /* Distribute space evenly */
+    text-align: center; /* Align text in the middle of each section */
+}
+
+.left h1, .middle h1, .right h1 {
+    color: #f8e788fe; /* Golden color for headers */
+    font-size: 30px;
+}
+
+.value {
+    display: block;
+    color: white; /* White color for the values */
+    font-size: 18px;
+    margin-top: 9px;
+    margin-bottom: 6px;
+}
+
+/* Styling for the Right Card */
+.right-card {
+    width: 350px; /* Wider */
+    height: 900px; /* Taller */
+    background-color: #222222;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 80px; /* Keeps the right card in view while scrolling */
+}
+
+.right-card h2 {
+    margin-top: 0;
+}
+
+.right-card ul {
+    padding-left: 20px;
+}
+
+.right-card li {
+    margin-bottom: 10px;
+}
+
+/* Horizontal Layout for Cards */
+.cards-horizontal {
+    display: flex;
+    gap: 20px; /* Space between the cards */
+}
+
+/* Make the cards interactive only on hover */
+.request-card:hover, .report-card:hover, .work-card:hover, .manage-users-card:hover {
+    background-color: #FFD700; /* Highlight color on hover */
+    transform: scale(1.05);  /* Slight zoom effect */
+}
+
+/* Make the cards taller (requests, report, my work, manage users) */
+.request-card, .report-card, .work-card, .manage-users-card {
+    height: 300px; /* Make these cards a bit taller */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    background-color: #444444;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Make all cards linkable by wrapping with a tag */
+.card-link {
+    display: block; /* Make the whole card clickable */
+    width: 100%; /* Ensure the link spans the entire card */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.card a {
+    color: white;
+    font-size: 18px;
+}
+
+/* Make the text invisible by default */
+.card-text {
+    display: none;  /* Initially hide the text */
+}
+
+/* Show text on hover */
+.request-card:hover .card-text, .report-card:hover .card-text, .work-card:hover .card-text, .manage-users-card:hover .card-text {
+    display: block;  /* Show text when hovered */
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Increase font size and make it bold on hover */
+.request-card:hover h3, .report-card:hover h3, .work-card:hover h3, .manage-users-card:hover h3 {
+    font-size: 24px;  /* Increase size */
+    font-weight: bold;  /* Make it bold */
+}
+
+/* Change text color to black on hover */
+.request-card:hover .card-text, .report-card:hover .card-text, .work-card:hover .card-text, .manage-users-card:hover .card-text,
+.request-card:hover h3, .report-card:hover h3, .work-card:hover h3, .manage-users-card:hover h3 {
+    color: black; /* Change text color to black */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .right-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .left-cards {
+        width: 100%;
+    }
+
+    /* Make the cards stack vertically on smaller screens */
+    .cards-horizontal {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .request-card, .report-card, .work-card, .manage-users-card {
+        width: 100%; /* Make them full width on small screens */
+        height: auto; /* Adjust the height for smaller screens */
+    }
+}

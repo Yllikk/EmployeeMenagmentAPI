@@ -1,0 +1,167 @@
+/* Base Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #434343, #000000);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box; /* Include padding in box model */
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #222222;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+  }
+  
+  nav .nav-left {
+    display: flex;
+    gap: 30px;
+  }
+  
+  nav .nav-left a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  nav .nav-left a.active {
+    color: #FFD700;
+  }
+  
+  nav .nav-left a:hover {
+    color: #FFD700;
+  }
+  
+  nav .nav-right h1 {
+    color: #FFD700;
+    font-size: 24px;
+  }
+  
+  /* Table Styling */
+  .table-container {
+    margin-top: -100px;
+    width: 120%;
+    max-width: 1000px; /* Limit maximum width */
+    background-color: white;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    overflow-x: auto;
+    /* border-radius: 8px; */
+    /* padding: 20px; */
+    box-sizing: border-box; /* Ensures padding is included in width calculation */
+  }
+  
+  .user-table {
+    width: 100%;
+    table-layout: fixed; /* Fixed table layout */
+    border-collapse: collapse;
+  }
+  
+  .user-table th, .user-table td {
+    padding: 12px 20px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    vertical-align: middle; /* Center content vertically */
+  }
+  
+  .user-table th {
+    background-color: #222222;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .user-table td {
+    background-color: #f9f9f9;
+  }
+  
+  .user-table tbody tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+  
+  button {
+    padding: 8px 16px;
+    margin-right: 8px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  /* Approve Button Style */
+  .approve-btn {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .approve-btn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+  }
+  
+  /* Disapprove Button Style */
+  .disapprove-btn {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .disapprove-btn:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+  }
+  
+  .actions {
+    display: flex;
+    gap: 0px;
+    justify-content: center;
+  }
+  
+  /* Table Scrolling */
+  .table-container {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  
+  thead, tbody {
+    display: block;
+  }
+  
+  tbody {
+    height: 300px;
+    overflow-y: auto;
+  }
+  
+  .user-table th, .user-table td {
+    width: 200px;
+    box-sizing: border-box;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  /* Ensure table fits without excessive overflow */
+  table {
+    table-layout: fixed;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .noUsers-div h2{
+    color: white;
+  }

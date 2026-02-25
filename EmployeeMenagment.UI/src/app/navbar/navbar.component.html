@@ -1,0 +1,14 @@
+<nav>
+    <div class="nav-left">
+        <a [routerLink]="[LoggedEmployee.isAdmin ? '/AdminHome' : '/Home', idCard]" routerLinkActive="active" 
+        [routerLinkActiveOptions]="{ exact: true }">Home</a>
+        <!-- <a (click)="navigateToMyProfile()" [class.active]="isActive('/AdminHome/' + this.idCard +'/My-Profile')" >My Profile</a> -->
+        <a [routerLink]="[LoggedEmployee.isAdmin ? '/AdminHome' : '/Home', idCard, 'My-Profile']" routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }">My Profile</a>
+        <a [routerLink]="'/About'" routerLinkActive="active">About</a>
+        <a href="#">Log Out</a>
+    </div>
+    <div class="nav-right">
+        <h1>myHR</h1>
+    </div>
+</nav>

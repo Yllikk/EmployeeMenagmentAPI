@@ -1,0 +1,83 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myHR Application</title>
+</head>
+<body>
+    
+    <app-navbar></app-navbar>
+
+    
+    <div class="main-container">
+        
+        <div class="left-cards">
+           
+            <div class="card welcome-card">
+                <div class="card-content">
+                    <div class="left">
+                        <h1>Welcome</h1>
+                        <span class="value" id="name">{{ this.LoggedEmployee.name }}</span> 
+                    </div>
+                    <div class="middle">
+                        <h1>Status</h1>
+                        <span class="value" id="status">{{this.Status}}</span> <!-- Dynamically populated -->
+                    </div>
+                    <div class="right">
+                        <h1>Phone Number</h1>
+                        <span class="value" id="phone">{{this.LoggedEmployee.phoneNumber || "None"}}</span> <!-- Dynamically populated -->
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="cards-horizontal">
+                
+                <a (click)="navigateToMyWork()"  class="card-link">
+                    <div class="card request-card">
+                        <h3>My Work</h3>
+                        <span class="card-text">Click here to view your work</span>
+                    </div>
+                </a>
+
+                
+                <a href="#" class="card-link">
+                    <div class="card report-card">
+                        <h3>Make a Request</h3>
+                        <span class="card-text">Click here to make a request</span>
+                    </div>
+                </a>
+            </div>
+
+            
+            <div class="cards-horizontal">
+                
+                <a href="#" class="card-link">
+                    <div class="card work-card">
+                        <h3>Announcements</h3>
+                        <span class="card-text">Click here to view announcements</span>
+                    </div>
+                </a>
+
+                
+                <a href="#" class="card-link">
+                    <div class="card manage-users-card">
+                        <h3>Team</h3>
+                        <span class="card-text">Click here to see your Team</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        
+        <div class="right-card">
+            <h2>Important Information</h2>
+            <br>
+            <ul>
+                <li>Notification 1</li>
+                <li>Notification 2</li>
+                <li>Notification 3</li>
+            </ul>
+        </div>
+    </div>
+</body>
+

@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #434343, #000000);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 70px; /* To prevent the navbar from overlapping the content */
+    overflow: hidden; /* Prevents scrolling */
+  }
+  
+  .card {
+    background-color: #444444;
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 850px;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 500px;
+  }
+  
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 15px;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  label {
+    margin-bottom: 5px;
+    font-size: 16px; /* Increase label font size */
+    font-weight: bold; /* Make label text bold */
+    color: #fff; /* White text to match the light theme of the card */
+  }
+  
+  input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7); /* Light background inside inputs */
+  }
+  
+  input[readonly] {
+    background-color: rgba(255, 255, 255, 0.5); /* Lighter color for read-only fields */
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #f8e788fe;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    /* font-weight: bold; Make button text bold */
+    transition: background-color 0.3s ease;
+  }
+  
+  .form-actions {
+    grid-column: span 2;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: -22px;
+    margin-bottom: -22px;
+  }
+  
+  button:hover {
+    background-color: #FFD700;
+  }
+  
+  #editButton {
+    width: auto;
+    padding: 8px 16px;
+  }
+  
+  #saveButton {
+    width: auto;
+    padding: 8px 16px; 
+  }
+  

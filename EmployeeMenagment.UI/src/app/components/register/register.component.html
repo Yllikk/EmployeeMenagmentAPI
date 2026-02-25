@@ -1,0 +1,38 @@
+<body>
+    <div class="register-container">
+        <form class="register-form">
+            <h1>Register</h1>
+            <div class="input-group">
+                <label for="emri">Emri</label>
+                <input type="text" id="emri" name="name" [(ngModel)]="RegEmployee.name"  required>
+                <p *ngIf="badName"> * Please fill your name</p>
+            </div>
+            <div class="input-group">
+                <label for="mbiemri">Mbiemri</label>
+                <input type="text" id="mbiemri" name="mbiemri" [(ngModel)]="RegEmployee.surname" required>
+                <p *ngIf="badSurname"> * Please fill your surname</p>
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email"  [(ngModel)]="RegEmployee.email" required>
+                <p *ngIf="badEmail"> * Please fill your email</p>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" [(ngModel)]="RegEmployee.password" required>
+                <p *ngIf="badPassword"> * Please fill your password</p>
+            </div>
+            <div class="input-group">
+                <label for="idcard">Numri i ID's</label>
+                <input type="text" id="idcard" name="idcard" [(ngModel)]="RegEmployee.idCard"  required>
+                <p *ngIf="badIDCard"> * Please fill your IDCard</p>
+            </div>
+            <div class="input-group">
+                <input type="checkbox" id="admin" name="isAdmin" [(ngModel)]="RegEmployee.isAdmin" placeholder="">
+                <label for="admin">Registering as an Admin?</label>
+              </div>
+            <button type="submit" (click)="onRegister()">Register</button>
+            <p class="login-text">Keni llogari? <a href="Login">Hyni këtu</a></p>
+        </form>
+    </div>
+</body>

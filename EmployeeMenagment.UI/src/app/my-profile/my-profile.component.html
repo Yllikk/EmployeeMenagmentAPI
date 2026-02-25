@@ -1,0 +1,80 @@
+<body>
+    <app-navbar></app-navbar>
+
+    <div class="card">
+        <form>
+          <div class="form-group">
+            <label for="name">Emri</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              [(ngModel)]="LoggedEmployee.name"
+              [readonly]="isReadOnly"
+            />
+          </div>
+          <div class="form-group">
+            <label for="surname">Mbiemri</label>
+            <input
+              type="text"
+              id="surname"
+              name="surname"
+              [(ngModel)]="LoggedEmployee.surname"
+              [readonly]="isReadOnly"
+            />
+          </div>
+          <div class="form-group">
+            <label for="idCard">IDCard</label>
+            <input
+              type="text"
+              id="idCard"
+              name="idCard"
+              [(ngModel)]="LoggedEmployee.idCard"
+              readonly
+            />
+          </div>
+          <div class="form-group">
+            <label for="phoneNumber">PhoneNumber</label>
+            <input
+              type="text"
+              id="phoneNumber"
+              name="phoneNumber"
+              [(ngModel)]="LoggedEmployee.phoneNumber"
+              [readonly]="isReadOnly"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              [(ngModel)]="LoggedEmployee.email"
+              [readonly]="isReadOnly"
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              [(ngModel)]="LoggedEmployee.password"
+              [readonly]="isReadOnly"
+            />
+          </div>
+          <div class="form-actions">
+            <button type="button" (click)="toggleEdit()">{{ editButtonText }}</button>
+          </div>
+        </form>
+      </div>
+      
+    
+
+
+
+
+
+
+    
+</body>

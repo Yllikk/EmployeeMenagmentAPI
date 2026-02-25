@@ -1,0 +1,51 @@
+<body>
+    <div class="card">
+      <form>
+        <div class="form-group">
+          <label for="name">Emri i Punimit</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            [(ngModel)]="UserWork.workName"
+            [readonly]="!isReadOnly"
+          />
+        </div>
+        <div class="form-group">
+          <label for="surname">Work ID</label>
+          <input
+            type="text"
+            id="surname"
+            name="surname"
+            [(ngModel)]="UserWork.id"
+            readonly
+          />
+        </div>
+        <div class="form-group full-width">
+          <label for="idCard">Description</label>
+          <textarea
+            id="idCard"
+            name="idCard"
+            rows="4"
+            [(ngModel)]="UserWork.workDescription"
+            [readonly]="!isReadOnly"
+          ></textarea>
+        </div>
+        
+        <div class="form-actions">
+            <button class="button-cancel" (click)="CancelWork()" *ngIf="this.isReadOnly">Cancel</button>
+            <button class="button-delete" (click)="DeleteWork(UserWork.id)" *ngIf="this.isReadOnly">Delete</button>
+            <button type="button"  (click)="toggleEdit()">{{editButtonText}}</button>
+            
+          </div>
+
+            <!-- <div class="form-actions">
+                <button type="button" class="button-cancel">Edit</button>
+                <button type="button" (click)="UpdateWork(UserWork)">Update</button>
+                <button id="button-cancel" class="button-cancel" (click)="CancelWork()">Cancel</button>
+            </div> -->
+        
+        
+      </form>
+    </div>
+  </body>

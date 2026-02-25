@@ -1,0 +1,87 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myHR Application</title>
+</head>
+<body>
+    
+    <app-navbar></app-navbar>
+
+    
+    <div class="main-container">
+        
+        <div class="left-cards">
+           
+            <div class="card welcome-card">
+                <div class="card-content">
+                    <div class="left">
+                        <h1>Welcome</h1>
+                        <span class="value" id="name">{{ this.LoggedEmployee.name }}</span> 
+                    </div>
+                    <div class="middle">
+                        <h1>Status</h1>
+                        <span class="value" id="status">{{this.Status}}</span> <!-- Dynamically populated -->
+                    </div>
+                    <div class="right">
+                        <h1>Phone Number</h1>
+                        <span class="value" id="phone">{{this.LoggedEmployee.phoneNumber || "None"}}</span> <!-- Dynamically populated -->
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="cards-horizontal">
+                
+                <a (click)="navigateToRegisterRequests()"  class="card-link">
+                    <div class="card request-card">
+                        <h3>Requests</h3>
+                        <span class="card-text">Click here to view requests</span>
+                    </div>
+                </a>
+
+                
+                <a href="#" class="card-link">
+                    <div class="card report-card">
+                        <h3>Make a Report</h3>
+                        <span class="card-text">Click here to create a report</span>
+                    </div>
+                </a>
+            </div>
+
+            
+            <div class="cards-horizontal">
+                
+                <a (click)="navigateToMyWork()" class="card-link">
+                    <div class="card work-card">
+                        <h3>My Work</h3>
+                        <span class="card-text">Click here to view your work</span>
+                    </div>
+                </a>
+
+                
+                <a (click)="navigateToUserMenagment()" class="card-link">
+                    <div class="card manage-users-card">
+                        <h3>Manage Users</h3>
+                        <span class="card-text">Click here to manage users</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        
+        <div class="right-card">
+            <h2>Important Information</h2>
+            <br>
+            <!-- <ul>
+                <li><a [routerLink]="[LoggedEmployee.isAdmin ? '/AdminHome' : '/Home', this.IdCard]" >Notification 1</a></li>
+                <a [routerLink]="[LoggedEmployee.isAdmin ? '/AdminHome' : '/Home', this.IdCard]" > speca</a>
+                <li>Notification 2</li>
+                <li>Notification 3</li>
+            </ul> -->
+            <div class="nav-right">
+                <a [routerLink]="['/AdminHome/'+this.IdCard+'/Create-Announcement']" >  Make a Announcement</a>
+            </div>
+            
+        </div>
+    </div>
+</body>

@@ -1,0 +1,34 @@
+<body>
+    <app-navbar></app-navbar>
+    
+      <div class="table-container" *ngIf="KaUsers">
+        <table class="user-table">
+          <thead>
+            <tr>
+              <th>IdCard</th>
+              <th>Emri</th>
+              <th>Mbiemri</th>
+              <th>Email</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let user of Users" >
+                  <td>{{ user.idCard }}</td>
+                  <td>{{ user.name }}</td>
+                  <td>{{ user.surname }}</td>
+                  <td>{{ user.email }}</td>
+                  <td class="actions">
+                    
+                    <button (click)="deleteUser(user)" class="disapprove-btn">Delete</button>
+                  </td>
+                </tr>
+          </tbody>
+        </table>
+      </div>
+      <div *ngIf="!KaUsers" class="noUsers-div" >
+        <h2>Ska Users per momentin</h2>
+      </div>
+    </body>
+    
+    
